@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import Main from './components/Main.jsx';
 import Home from './components/Home.jsx';
+import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
+import ChefHeader from './components/ChefHeader.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,9 +21,21 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-      },
+      }
     ],
   },
+
+  {
+    path: "/chef",
+    element: <ChefHeader></ChefHeader>,
+    children: [
+      {
+        path: ":id",
+        element: <ChefDetails></ChefDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`)
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

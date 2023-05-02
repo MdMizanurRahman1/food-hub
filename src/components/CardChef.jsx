@@ -3,13 +3,14 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { AiOutlineLike, AiOutlineArrowRight } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const CardChef = ({ chef }) => {
     const { chef_name, chef_picture, likes, number_of_recipes, years_of_experience } = chef;
     return (
         <>
             <Col md={4} className="mb-4">
-                <Card className="h-100 shadow-lg rounded chef-card" style={{ backgroundColor: '#ffe5e5' }}>
+                <Card className="h-100 shadow-md rounded chef-card" style={{ backgroundColor: '#ffe5e5' }}>
                     <Card.Img
                         variant="top"
                         src={chef_picture}
@@ -45,7 +46,8 @@ const CardChef = ({ chef }) => {
                             onMouseOver={(e) => e.target.style.opacity = 1}
                             onMouseOut={(e) => e.target.style.opacity = 0.8}
                         >
-                            <span>View Recipes</span>
+
+                            <Link to={`/chef/${chef.id}`}><span>View Recipes</span></Link>
                             <AiOutlineArrowRight size={20} className="ml-2" />
                         </Button>
                     </Card.Body>

@@ -1,17 +1,14 @@
 import React from 'react';
 import Header from './Header/Header';
-import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
 
-
-const Main = () => {
+const ChefHeader = () => {
     return (
         <div>
             <Header></Header>
             <Outlet></Outlet>
-            <Footer></Footer>
         </div>
     );
 };
 
-export default Main;
+export default ChefHeader;
