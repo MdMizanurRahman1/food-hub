@@ -2,7 +2,8 @@ import React from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { AiOutlineLike } from 'react-icons/ai';
 import { Link, useLoaderData } from 'react-router-dom';
-import { FaStar, FaRegStar } from 'react-icons/fa';
+import Recipe from './Recipe';
+
 
 const ChefDetails = () => {
     const chefDetails = useLoaderData();
@@ -61,29 +62,10 @@ const ChefDetails = () => {
 
             <Container>
                 <Row xs={1} md={2} lg={3} className="g-4 mx-auto">
-                    {recipes.map((recipe) => (
-                        <Col key={recipe._id} className="d-flex align-items-stretch">
-                            <Card style={{ backgroundColor: '#ffe6e6', borderRadius: '15px', boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)', transition: 'all 0.3s ease' }}>
-                                <Card.Body style={{ height: '75vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                                    <div>
-                                        <Card.Title className="text-center mb-4">Recipe: {recipe.recipe_name}</Card.Title>
-                                        <Card.Text>
-                                            <span>Ingredients:</span> {recipe.ingredients.map((ingredient, index) => (
-                                                <p className="m-0" key={index}>{`${index + 1}. ${ingredient.trim()}`}</p>
-                                            ))}
-                                        </Card.Text>
-                                        <Card.Text className="mb-3">Method: {recipe.cooking_method}</Card.Text>
-                                    </div>
-                                    <div>
-                                        <div className='d-flex justify-content-between align-items-center'>
-                                            <span>Rating: {recipe.rating}</span>
-                                            <Button style={{ backgroundColor: '#ff6b6b' }}>Favorite</Button>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
+                    {recipes.map(recipe => <Recipe
+                        key={recipe._id}
+                        recipe={recipe}
+                    ></Recipe>)}
                 </Row>
             </Container>
 
