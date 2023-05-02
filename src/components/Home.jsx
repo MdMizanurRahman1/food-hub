@@ -17,7 +17,8 @@ const Home = () => {
     console.log(chefData);
     return (
         <Container>
-            <h3 className='text-center mt-5 mb-3 text-danger' style={{ fontWeight: 'bold' }}>OUR EXPERTS ARE</h3>
+            <h3 className='text-center mt-5 mb-1 text-danger' style={{ fontWeight: 'bold' }}>Meet Our Qualified Chefs</h3>
+            <p className='text-center text-muted mb-5'>Who are consistently seeking someting new.</p>
             <Row xs={1} md={2} lg={3} className="g-4">
                 {
                     chefData.map(chef => <CardChef
