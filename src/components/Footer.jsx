@@ -4,7 +4,7 @@ import { AiFillGithub, AiFillTwitterSquare, AiFillInstagram } from 'react-icons/
 
 const Footer = () => {
     return (
-        <footer className='bg-dark text-white py-3 fw-lighter'>
+        <footer className='bg-dark text-white py-3 fw-lighter '>
             <Container>
                 <Row >
                     <Col md={4} className='mb-3 '>

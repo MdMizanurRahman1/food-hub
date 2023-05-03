@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,9 +26,11 @@ const Header = () => {
                             {isLoggedIn ? (
                                 <Image src='/profile.jpg' roundedCircle className='mx-2' style={{ width: '30px', height: '30px' }} />
                             ) : (
-                                <Nav.Link href='#' onClick={() => setIsLoggedIn(true)} className='text-primary'>
-                                    Login
-                                </Nav.Link>
+                                <div href='#' onClick={() => setIsLoggedIn(true)} className='text-primary'>
+                                    <Link to='/login'>
+                                        <Button className='px-4'>Login</Button>
+                                    </Link>
+                                </div>
                             )}
                         </Nav>
                     </Navbar.Collapse>

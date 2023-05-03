@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { AiOutlineLike, AiOutlineArrowRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
+
 const CardChef = ({ chef }) => {
     const { chef_name, chef_picture, likes, number_of_recipes, years_of_experience } = chef;
     return (
