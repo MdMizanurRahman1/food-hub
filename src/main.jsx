@@ -14,6 +14,7 @@ import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
 import ChefHeader from './components/ChefHeader.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register';
+import AuthProvider from './components/Providers/AuthProvider';
 
 
 
@@ -56,6 +57,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

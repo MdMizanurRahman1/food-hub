@@ -1,18 +1,66 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import { AuthContext } from '../Providers/AuthProvider';
 
 
 
 
 const Login = () => {
 
+    const { signIn, signInWithGithub, signInWithGoogle } = useContext(AuthContext)
+    const [error, setError] = useState(null);
+
+    const handleLogIn = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        console.log(email, password);
+
+        signIn(email, password)
+            .then((result) => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+
+            })
+            .catch((error) => {
+                console.log(error);
+                setError(error.message);
+            });
+    }
+
+    const handleGithubLogIn = () => {
+        signInWithGithub()
+            .then((result) => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+            })
+            .catch((error) => {
+                console.log(error);
+                setError(error.message);
+            });
+    }
+
+    const handleGoogleLogIn = () => {
+        signInWithGoogle()
+            .then((result) => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+            })
+            .catch((error) => {
+                console.log(error);
+                setError(error.message);
+            });
+    }
+
     return (
         <Container className='mx-auto w-25 my-5'>
             <h3>Please Login</h3>
-            <Form >
+            <Form onSubmit={handleLogIn}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" name='email' required placeholder="Enter email" />
@@ -29,17 +77,19 @@ const Login = () => {
                 <Form.Text className="text-secondary">
                     Don't have an account? <Link to='/register'>Register</Link>
                 </Form.Text>
+
                 <Form.Text className="text-danger">
-
+                    <p>{error}</p>
                 </Form.Text>
-                <div className="d-flex flex-column mt-3 text-primary-emphasis">
-                    <a href="#" className="btn btn-light btn-lg mb-3">
-                        <FaGithub className="mr-2" /> Sign in with GitHub
-                    </a>
 
-                    <a href="#" className="btn btn-light text-primary-emphasis btn-lg">
+                <div className="d-flex flex-column mt-3 text-primary-emphasis">
+                    <Button variant="light" className="btn-lg mb-3" onClick={handleGithubLogIn}>
+                        <FaGithub className="mr-2" /> Sign in with GitHub
+                    </Button>
+
+                    <Button variant="light" className="btn-lg" onClick={handleGoogleLogIn}>
                         <FcGoogle className="mr-2" /> Sign in with Google
-                    </a>
+                    </Button>
                 </div>
 
             </Form>
