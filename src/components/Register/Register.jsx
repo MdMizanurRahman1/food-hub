@@ -2,11 +2,14 @@ import React from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+
+
 const Register = () => {
+
     return (
-        <Container className='mx-auto w-25'>
+        <Container className='mx-auto w-25 my-5'>
             <h3>Please Register</h3>
-            <Form>
+            <Form >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
                     <Form.Control type="text" name='name' required placeholder="Enter your name" />
@@ -25,7 +28,7 @@ const Register = () => {
                     <Form.Control type="password" name='password' required placeholder="Password" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className='mb-2'>
                     Register
                 </Button>
                 <br></br>
