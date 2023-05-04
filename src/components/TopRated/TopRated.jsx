@@ -17,7 +17,7 @@ const TopRated = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 rounded"
-                        src="../../../public/section1.jpg"
+                        src="section1.jpg"
                         alt="Chicken cutlen with chili"
                     />
                     <Carousel.Caption>
@@ -28,7 +28,7 @@ const TopRated = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 rounded"
-                        src="../../../public/section2.jpg"
+                        src="section2.jpg"
                         alt="Fish fry with onions"
                     />
                     <Carousel.Caption>
@@ -39,7 +39,7 @@ const TopRated = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 rounded"
-                        src="../../../public/section3.jpg"
+                        src="section3.jpg"
                         alt="Noodles with winter onion"
                     />
                     <Carousel.Caption>

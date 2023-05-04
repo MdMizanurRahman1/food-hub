@@ -19,7 +19,7 @@ const Header = () => {
     }
 
     const getNavLinkClass = (path) => {
-        return location.pathname === path ? 'text-primary' : 'text-black';
+        return location.pathname === path ? 'text-primary' : 'text-light';
     }
 
     return (
@@ -38,16 +38,12 @@ const Header = () => {
                             </Link>
                         </Nav>
 
-                        <Nav className='align-items-center justify-content-center text-white ms-5'>
-                            {user && <Image src='/profile.jpg' roundedCircle className='mx-2' style={{ width: '30px', height: '30px' }} />}
+                        <Nav>
+                            {user && <img className='rounded-circle' width={'30px'} height={'30px'} src={user?.photoURL} alt="" />}
 
-                            {user ?
-                                <Button onClick={handleLogOut} className='px-4'>Logout</Button> :
-                                <Link to='/login'>
-                                    <Button className='px-4' >Login</Button>
-                                </Link>
-                            }
+                            {user ? <Button onClick={handleLogOut} variant='warning'>LogOut</Button> : <Link to='/login'><Button variant='warning'>LogIn</Button></Link>}
                         </Nav>
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

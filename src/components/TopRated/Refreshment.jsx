@@ -11,7 +11,7 @@ const Refreshment = () => {
             <Row xs={1} md={2} lg={4} className="g-4">
                 <Col>
                     <Card className='border-0'>
-                        <Card.Img variant="top" src="../../../public/tea.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                        <Card.Img variant="top" src="tea.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                         <Card.Body className='bg-danger bg-opacity-10 rounded' style={{ height: '200px' }}>
                             <Card.Title className='text-center text-danger text-opacity-75'>Straberry Ice Tea</Card.Title>
                             <Card.Text className="text-muted text-center" style={{ fontSize: '14px' }}>
@@ -22,7 +22,7 @@ const Refreshment = () => {
                 </Col>
                 <Col>
                     <Card className='border-0'>
-                        <Card.Img variant="top" src="../../../public/chocolate.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                        <Card.Img variant="top" src="chocolate.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                         <Card.Body className='bg-danger bg-opacity-10 rounded' style={{ height: '200px' }}>
                             <Card.Title className='text-center text-danger text-opacity-75'>Rasberry Cheesecake</Card.Title>
                             <Card.Text className="text-muted text-center" style={{ fontSize: '14px' }}>
@@ -33,7 +33,7 @@ const Refreshment = () => {
                 </Col>
                 <Col>
                     <Card className='border-0'>
-                        <Card.Img variant="top" src="../../../public/cheesecake.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                        <Card.Img variant="top" src="public/cheesecake.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                         <Card.Body className='bg-danger bg-opacity-10 rounded' style={{ height: '200px' }}>
                             <Card.Title className='text-center text-danger text-opacity-75'>Chocolate Ice-cream</Card.Title>
                             <Card.Text className="text-muted text-center" style={{ fontSize: '14px' }}>
@@ -46,7 +46,7 @@ const Refreshment = () => {
                     <Card className='border-0'>
                         <Card.Img variant="top" src="../../../public/pancakes.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                         <Card.Body className='bg-danger bg-opacity-10 rounded' style={{ height: '200px' }}>
-                            <Card.Title className='text-center text-danger text-opacity-75'>Caeamel Pancake</Card.Title>
+                            <Card.Title className='text-center text-danger text-opacity-75'>Caramel Pancake</Card.Title>
                             <Card.Text className="text-muted text-center " style={{ fontSize: '14px' }}>
                                 Caramel pancakes are perfect for a special occasion breakfast or brunch, or just as a fun way to switch up your usual pancake routine.
                             </Card.Text>

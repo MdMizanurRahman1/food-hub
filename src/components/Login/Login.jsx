@@ -15,7 +15,7 @@ const Login = () => {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
-    console.log('login page location', location);
+
 
     const from = location.state?.from?.pathname || "/";
 
@@ -26,7 +26,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email, password);
+
 
         signIn(email, password)
             .then((result) => {
