@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import { Button, Card, Col, Toast } from 'react-bootstrap';
+import { AiFillStar } from 'react-icons/ai';
 
-const Recipe = ({ recipe }) => {
-    const [favorite, setFavorite] = useState(false);
+const Recipe = ({ recipe, favorite, handleClick }) => {
+    const stars = [];
+    const [isFavorite, setIsFavorite] = useState(favorite);
     const [showToast, setShowToast] = useState(false);
-
-    const handleClick = () => {
-        setFavorite(true);
-        setShowToast(true);
+    for (let i = 0; i < recipe.rating; i++) {
+        stars.push(<AiFillStar key={i} />);
     }
+
+    const handleClickFavorite = () => {
+        setIsFavorite(true);
+        setShowToast(true);
+        handleClick(recipe);
+    };
 
     return (
         <div>
@@ -25,17 +31,21 @@ const Recipe = ({ recipe }) => {
                             <Card.Text className="mb-3">Method: {recipe.cooking_method}</Card.Text>
                         </div>
 
-                        <div className='d-flex justify-content-between align-items-center'>
-                            <span>Rating: {recipe.rating}</span>
-                            <Button
-                                style={{ backgroundColor: '#ff6b6b' }}
-                                disabled={favorite}
-                                onClick={handleClick}
-                            >
-                                {favorite ? "Favorite" : "Favorite"}
-                            </Button>
+                        <div>
+                            <div className='d-flex justify-content-between align-items-center'>
+                                <span>
+                                    {stars}
+                                    <span className="ml-2">({recipe.rating})</span>
+                                </span>
+                                <Button
+                                    style={{ backgroundColor: '#ff6b6b' }}
+                                    disabled={isFavorite}
+                                    onClick={handleClickFavorite}
+                                >
+                                    {isFavorite ? "Favorite" : "Favorite"}
+                                </Button>
+                            </div>
                         </div>
-
                     </Card.Body>
                 </Card>
             </Col>

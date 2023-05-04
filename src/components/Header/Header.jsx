@@ -4,6 +4,7 @@ import './Header.css';
 import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 
+
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     const location = useLocation();
@@ -57,11 +58,10 @@ const Header = () => {
                         <p className='fs-6'>Food for thought, fuel for life"? It emphasizes the importance of not only enjoying delicious food, but also recognizing its role in nourishing and energizing our bodies and minds.</p>
                         <Button className='btn btn-danger fs-6'>CHECK OUR MENU</Button>
                     </div>
-                    <div className="col-sm-12 col-md-6 d-flex justify-content-center">
-                        <Image src='/banner.jpg' className='img-fluid col-sm-12' style={{ maxHeight: '300px' }} />
-                    </div>
+
                 </div>
             </Container>
+
 
         </div>
     );

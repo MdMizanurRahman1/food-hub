@@ -3,6 +3,8 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { AiOutlineLike, AiOutlineArrowRight } from 'react-icons/ai';
+import LazyLoad from 'react-lazy-load';
+
 import { Link } from 'react-router-dom';
 
 
@@ -12,16 +14,16 @@ const CardChef = ({ chef }) => {
         <>
             <Col md={4} className="mb-4">
                 <Card className="h-100 shadow-md rounded chef-card" style={{ backgroundColor: '#ffe5e5' }}>
-                    <Card.Img
-                        variant="top"
-                        src={chef_picture}
-                        className="rounded-top img-transition"
-                        style={{
-                            transition: "transform .2s ease-in-out",
-                        }}
-                        onMouseOver={(e) => e.target.style.transform = "scale(1.05)"}
-                        onMouseOut={(e) => e.target.style.transform = "scale(1)"}
-                    />
+                    <LazyLoad height={250}>
+                        <Card.Img
+                            variant="top"
+                            src={chef_picture}
+                            className="rounded-top img-transition"
+                            style={{ transition: "transform .2s ease-in-out" }}
+                            onMouseOver={(e) => (e.target.style.transform = "scale(1.05)")}
+                            onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
+                        />
+                    </LazyLoad>
                     <Card.Body
                         className="d-flex flex-column justify-content-between card-transition"
                     >
