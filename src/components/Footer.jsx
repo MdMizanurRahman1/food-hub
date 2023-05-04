@@ -16,8 +16,8 @@ const Footer = () => {
                     <Col md={4} className='mb-3  text-center '>
                         <h4>Contact Us</h4>
                         <p>
-                            123 Main St. <br />
-                            New York, NY 10001 <br />
+                            233 S Sathorn Rd, Khwaeng Yan Nawa, <br />
+                            Sathon, Bangkok 10120, Thailand<br />
                             (123) 456-7890 <br />
                             info@example.com
                         </p>

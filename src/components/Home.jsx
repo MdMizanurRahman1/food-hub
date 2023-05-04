@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardChef from './CardChef';
 import { Container, Row } from 'react-bootstrap';
 import TopRated from './TopRated/TopRated';
+import Refreshment from './TopRated/Refreshment';
 
 
 
@@ -29,6 +30,7 @@ const Home = () => {
                     ></CardChef>)
                 }
             </Row>
+            <Refreshment></Refreshment>
         </Container>
     );
 };

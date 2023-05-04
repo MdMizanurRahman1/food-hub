@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Carousel } from 'react-bootstrap';
 import { useState } from "react";
 
-const TopRated = ({ imgSrc, title, description }) => {
+const TopRated = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const toggleHover = () => {
