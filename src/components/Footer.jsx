@@ -2,6 +2,8 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { AiFillGithub, AiFillTwitterSquare, AiFillInstagram } from 'react-icons/ai';
 
+// footer used for all
+
 const Footer = () => {
     return (
         <footer className='bg-dark text-white py-3 fw-lighter '>

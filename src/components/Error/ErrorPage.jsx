@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col, Image, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+// error handleing page
+
 const ErrorPage = () => {
     return (
         <Card className="mx-auto shadow p-4 my-5 bg-body-tertiary rounded" style={{ maxWidth: '700px', backgroundColor: '#FFC0CB' }}>

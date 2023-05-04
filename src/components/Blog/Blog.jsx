@@ -2,6 +2,8 @@
 import React from 'react';
 import { Card, Col, Container } from 'react-bootstrap';
 
+// blog page
+
 const Blog = () => {
     const cardStyle = {
         width: '70%',

@@ -4,6 +4,7 @@ import './Header.css';
 import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 
+// banner page used for all
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);

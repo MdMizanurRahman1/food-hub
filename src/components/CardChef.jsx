@@ -7,6 +7,7 @@ import LazyLoad from 'react-lazy-load';
 
 import { Link } from 'react-router-dom';
 
+//showing chef information in home page
 
 const CardChef = ({ chef }) => {
     const { chef_name, chef_picture, likes, number_of_recipes, years_of_experience } = chef;

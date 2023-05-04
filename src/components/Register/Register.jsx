@@ -3,7 +3,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 
-
+// register page
 
 const Register = () => {
     const [error, setError] = useState(null);
