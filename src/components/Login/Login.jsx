@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../Providers/AuthProvider';
@@ -10,8 +10,15 @@ import { AuthContext } from '../Providers/AuthProvider';
 
 const Login = () => {
 
-    const { signIn, signInWithGithub, signInWithGoogle } = useContext(AuthContext)
+    const { signIn, signInWithGithub, signInWithGoogle } = useContext(AuthContext);
+
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log('login page location', location);
+
+    const from = location.state?.from?.pathname || "/";
+
 
     const handleLogIn = event => {
         event.preventDefault();
@@ -25,6 +32,7 @@ const Login = () => {
             .then((result) => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                navigate(from, { replace: true })
 
             })
             .catch((error) => {
