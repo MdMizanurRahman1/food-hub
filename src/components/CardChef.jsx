@@ -48,7 +48,7 @@ const CardChef = ({ chef }) => {
                             onMouseOut={(e) => e.target.style.opacity = 0.8}
                         >
 
-                            <Link to={`/chef/${chef.id}`}><span>View Recipes</span></Link>
+                            <Link className='text-decoration-none me-1' to={`/chef/${chef.id}`}><span className=' text-white'>View Recipes</span></Link>
                             <AiOutlineArrowRight size={20} className="ml-2" />
                         </Button>
                     </Card.Body>
