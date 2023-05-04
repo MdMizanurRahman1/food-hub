@@ -19,7 +19,7 @@ const Header = () => {
     }
 
     const getNavLinkClass = (path) => {
-        return location.pathname === path ? 'text-primary' : 'text-white';
+        return location.pathname === path ? 'text-primary' : 'text-black';
     }
 
     return (
