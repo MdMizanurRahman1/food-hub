@@ -6,14 +6,14 @@ const Footer = () => {
     return (
         <footer className='bg-dark text-white py-3 fw-lighter '>
             <Container>
-                <Row >
-                    <Col md={4} className='mb-3 '>
+                <Row>
+                    <Col xs={12} sm={6} md={4} className='mb-3 text-center'>
                         <h4>About Us</h4>
                         <p>
                             Our menu features a range of mouth-watering options, from classic favorites to innovative creations, all served in a warm and inviting atmosphere that's perfect for any occasion.
                         </p>
                     </Col>
-                    <Col md={4} className='mb-3  text-center '>
+                    <Col xs={12} sm={6} md={4} className='mb-3 text-center'>
                         <h4>Contact Us</h4>
                         <p>
                             233 S Sathorn Rd, Khwaeng Yan Nawa, <br />
@@ -22,7 +22,7 @@ const Footer = () => {
                             info@example.com
                         </p>
                     </Col>
-                    <Col md={4} className='text-end'>
+                    <Col xs={12} sm={6} md={4} className='text-center'>
                         <h4>Follow Us</h4>
                         <ul className='list-inline'>
                             <li className='list-inline-item'>

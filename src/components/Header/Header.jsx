@@ -22,8 +22,8 @@ const Header = () => {
 
     return (
         <div className='banner'>
-            <Navbar>
-                <Container>
+            <Navbar expand="sm">
+                <Container fluid>
                     <Navbar.Brand href='#' className='text-white fs-2'>Thai Food Hubs</Navbar.Brand>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
@@ -50,16 +50,19 @@ const Header = () => {
                 </Container>
             </Navbar>
             <Container>
-                <div className="row mt-4 pt-4  ">
+                <div className="row mt-4 pt-4">
                     <div className="col-sm-12 col-md-6 text-white">
-                        <h3 className='fw-semibold'>WIDE OPTIONS OF CHOICE</h3>
-                        <h1 className='fw-bold'>DELICIOUS RECEPIES FOOD</h1>
-                        <p>Food for thought, fuel for life"? It emphasizes the importance of not only enjoying delicious food, but also recognizing its role in nourishing and energizing our bodies and minds.</p>
-                        <Button className='btn btn-danger'>CHECK OUR MENU</Button>
-
+                        <h3 className='fw-semibold fs-5'>WIDE OPTIONS OF CHOICE</h3>
+                        <h1 className='fw-bold fs-5'>DELICIOUS RECEPIES FOOD</h1>
+                        <p className='fs-6'>Food for thought, fuel for life"? It emphasizes the importance of not only enjoying delicious food, but also recognizing its role in nourishing and energizing our bodies and minds.</p>
+                        <Button className='btn btn-danger fs-6'>CHECK OUR MENU</Button>
+                    </div>
+                    <div className="col-sm-12 col-md-6 d-flex justify-content-center">
+                        <Image src='/banner.jpg' className='img-fluid col-sm-12' style={{ maxHeight: '300px' }} />
                     </div>
                 </div>
             </Container>
+
         </div>
     );
 };
