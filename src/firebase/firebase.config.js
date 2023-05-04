@@ -4,13 +4,15 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log('environment variable', import.meta.env.VITE_apiKey);
 const firebaseConfig = {
-    apiKey: "AIzaSyDXs_b06O6mXbhoUF_BjJSKIrl50E_OHKs",
-    authDomain: "food-hub-eaff5.firebaseapp.com",
-    projectId: "food-hub-eaff5",
-    storageBucket: "food-hub-eaff5.appspot.com",
-    messagingSenderId: "140578394380",
-    appId: "1:140578394380:web:4e4876c52f3f9d2473f929"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

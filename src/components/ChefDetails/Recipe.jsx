@@ -20,7 +20,7 @@ const Recipe = ({ recipe, favorite, handleClick }) => {
         <div>
             <Col className="d-flex align-items-stretch">
                 <Card style={{ backgroundColor: '#ffe6e6', borderRadius: '15px', boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)', transition: 'all 0.3s ease' }}>
-                    <Card.Body style={{ height: '75vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <Card.Body style={{ height: '90vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                         <div>
                             <Card.Title className="text-center mb-4">Recipe: {recipe.recipe_name}</Card.Title>
                             <Card.Text>

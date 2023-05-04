@@ -53,7 +53,7 @@ const ChefDetails = () => {
                                 onMouseOver={(e) => e.target.style.opacity = 1}
                                 onMouseOut={(e) => e.target.style.opacity = 0.8}
                             >
-                                <Link to='/'><span className='text-white'>Return Home</span></Link>
+                                <Link className='text-decoration-none' to='/'><span className='text-white '>Return Home</span></Link>
                             </Button>
                         </Card.Body>
                     </Card>
