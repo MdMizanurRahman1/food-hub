@@ -36,7 +36,7 @@ const CardChef = ({ chef }) => {
                                 <small className="text-muted">Number of recipes: {number_of_recipes}</small>
                             </Card.Text>
                             <Card.Text className="text-center">
-                                <AiOutlineLike size={20} className="text-danger" /> <span className="text-danger">{likes}</span>
+                                <AiOutlineLike size={20} className="text-danger" /> <span className="text-danger">Likes: {likes}</span>
                             </Card.Text>
                         </div>
                         <Button
