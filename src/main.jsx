@@ -9,12 +9,12 @@ import {
 } from "react-router-dom";
 import Main from './components/Main.jsx';
 import Home from './components/Home.jsx';
-import TopRated from './components/TopRated/TopRated';
 import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
 import ChefHeader from './components/ChefHeader.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register';
 import AuthProvider from './components/Providers/AuthProvider';
+import ErrorPage from './components/Error/ErrorPage';
 
 
 
@@ -23,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
