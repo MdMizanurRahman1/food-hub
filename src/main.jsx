@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: ":id",
         element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`)
+        loader: ({ params }) => fetch(`https://thai-food-hubs-server-mdmizanurrahman1.vercel.app/chef/${params.id}`)
       }
     ]
   }
