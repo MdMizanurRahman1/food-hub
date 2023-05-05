@@ -6,6 +6,8 @@ const Recipe = ({ recipe, favorite, handleClick }) => {
     const stars = [];
     const [isFavorite, setIsFavorite] = useState(favorite);
     const [showToast, setShowToast] = useState(false);
+
+    // for rating according to rating numbers
     for (let i = 0; i < recipe.rating; i++) {
         stars.push(<AiFillStar key={i} />);
     }

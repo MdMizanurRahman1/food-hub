@@ -27,11 +27,10 @@ const Register = () => {
             .then((result) => {
                 const loggedUser = result.user;
                 updateUserInfo(loggedUser, name, photo)
-                console.log(loggedUser);
+
             })
 
             .catch((error) => {
-                console.log(error);
                 setError(error.message);
             });
 

@@ -30,16 +30,16 @@ const Header = () => {
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
                         <Nav className='ms-auto gap-4'>
-                            <Link to='/' className={`text-decoration-none ${getNavLinkClass('/')}`}>
+                            <Link to='/' className={`text-decoration-none  ${getNavLinkClass('/')}`}>
                                 Home
                             </Link>
-                            <Link to='/blog' className={`text-decoration-none ${getNavLinkClass('/blog')}`}>
+                            <Link to='/blog' className={`text-decoration-none mx-3 ${getNavLinkClass('/blog')}`}>
                                 Blog
                             </Link>
                         </Nav>
 
                         <Nav>
-                            {user && <img className='rounded-circle' width={'30px'} height={'30px'} src={user?.photoURL} alt="" />}
+                            {user && <img className='rounded-circle mx-3' width={'30px'} height={'30px'} src={user?.photoURL} alt="" />}
 
                             {user ? <Button onClick={handleLogOut} variant='warning'>LogOut</Button> : <Link to='/login'><Button variant='warning'>LogIn</Button></Link>}
                         </Nav>

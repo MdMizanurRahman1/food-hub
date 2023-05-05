@@ -22,9 +22,9 @@ const Refreshment = () => {
                 </Col>
                 <Col>
                     <Card className='border-0'>
-                        <Card.Img variant="top" src="chocolate.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                        <Card.Img variant="top" src="icecreame.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                         <Card.Body className='bg-danger bg-opacity-10 rounded' style={{ height: '200px' }}>
-                            <Card.Title className='text-center text-danger text-opacity-75'>Rasberry Cheesecake</Card.Title>
+                            <Card.Title className='text-center text-danger text-opacity-75'>Chocolate Ice-creame</Card.Title>
                             <Card.Text className="text-muted text-center" style={{ fontSize: '14px' }}>
                                 Raspberry cheesecake is a delightful dessert. Raspberry cheesecake is a perfect dessert for special occasions or at a dinner party.
                             </Card.Text>
@@ -35,7 +35,7 @@ const Refreshment = () => {
                     <Card className='border-0'>
                         <Card.Img variant="top" src="cheesecake.jpg" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                         <Card.Body className='bg-danger bg-opacity-10 rounded' style={{ height: '200px' }}>
-                            <Card.Title className='text-center text-danger text-opacity-75'>Chocolate Ice-cream</Card.Title>
+                            <Card.Title className='text-center text-danger text-opacity-75'>Rasberry Cheesecake</Card.Title>
                             <Card.Text className="text-muted text-center" style={{ fontSize: '14px' }}>
                                 Chocolate ice cream is a classic frozen dessert that's loved by all ages. In hot summer days, this is a timeless dessert that never goes out of style.
                             </Card.Text>

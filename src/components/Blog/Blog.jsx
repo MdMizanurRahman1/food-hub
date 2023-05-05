@@ -1,26 +1,44 @@
 
 import React from 'react';
 import { Card, Col, Container } from 'react-bootstrap';
+import { useRef } from 'react';
+import ReactToPdf from 'react-to-pdf';
 
 // blog page
 
+const options = {
+    orientation: 'landscape',
+    unit: 'in',
+
+};
+
 const Blog = () => {
+    const ref = useRef();
     const cardStyle = {
-        width: '70%',
-        margin: '20px auto',
-        padding: '20px',
+        width: '80%',
+        margin: '20px auto'
+
     };
 
     return (
-        <Container>
-            <h3 className='text-center text-danger my-4'>Blog</h3>
+        <Container ref={ref} >
+
+            <div className='text-center mt-5'>
+                <ReactToPdf targetRef={ref} options={options} x={.5} scale={0.8}>
+                    {({ toPdf }) => (
+                        <button className=' my-3 bg-danger rounded text-white' onClick={toPdf}>Generate blog pdf</button>
+                    )}
+                </ReactToPdf>
+                <div ref={ref} />
+            </div>
+            <h3 className='text-center text-danger my-5'>Blog</h3>
             <Col>
                 <Card style={cardStyle}>
-                    <Card.Body>
-                        <Card.Title>
+                    <Card.Body className='bg-danger bg-opacity-10'>
+                        <Card.Title >
                             <span>Question 1 .</span> Tell us the differences between uncontrolled and controlled components.
                         </Card.Title>
-                        <Card.Text>
+                        <Card.Text >
                             Controlled components in React are components whose state and behavior are managed by the parent component.
                             These components rely on props handed down from the parent component to update their state and behavior.
                             Uncontrolled components are those that maintain their own state internally.
@@ -30,7 +48,7 @@ const Blog = () => {
             </Col>
             <Col>
                 <Card style={cardStyle}>
-                    <Card.Body>
+                    <Card.Body className='bg-danger bg-opacity-10'>
                         <Card.Title>
                             <span>Question 2 .</span> How to validate React props using PropTypes.
                         </Card.Title>
@@ -53,7 +71,7 @@ const Blog = () => {
             </Col>
             <Col>
                 <Card style={cardStyle}>
-                    <Card.Body>
+                    <Card.Body className='bg-danger bg-opacity-10'>
                         <Card.Title>
                             <span>Question 3.</span> What is a custom hook, and why will you create a custom hook?
                         </Card.Title>
@@ -66,7 +84,7 @@ const Blog = () => {
             </Col>
             <Col>
                 <Card className='mb-5' style={cardStyle}>
-                    <Card.Body>
+                    <Card.Body className='bg-danger bg-opacity-10'>
                         <Card.Title>
                             <span>Question 4 .</span> What is a custom hook, and why will you create a custom hook?
                         </Card.Title>
@@ -77,6 +95,7 @@ const Blog = () => {
                     </Card.Body>
                 </Card>
             </Col>
+
         </Container>
     );
 };

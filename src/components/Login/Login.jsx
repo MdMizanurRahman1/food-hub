@@ -31,12 +31,10 @@ const Login = () => {
         signIn(email, password)
             .then((result) => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
                 navigate(from, { replace: true })
 
             })
             .catch((error) => {
-                console.log(error);
                 setError(error.message);
             });
     }
@@ -45,10 +43,8 @@ const Login = () => {
         signInWithGithub()
             .then((result) => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
             })
             .catch((error) => {
-                console.log(error);
                 setError(error.message);
             });
     }
@@ -57,10 +53,8 @@ const Login = () => {
         signInWithGoogle()
             .then((result) => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
             })
             .catch((error) => {
-                console.log(error);
                 setError(error.message);
             });
     }

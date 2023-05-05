@@ -16,7 +16,7 @@ const Home = () => {
             .then(data => setChefData(data))
 
     }, [])
-    console.log(chefData);
+
     return (
         <Container className='my-5'>
             <TopRated></TopRated>
